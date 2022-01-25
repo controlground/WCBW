@@ -11573,3 +11573,7 @@ p.mb-4 {
 .btn-dark {
   color: white !important;
 }
+
+.first-question, .second-question, .third-question, .fourth-question {
+  margin: 30px 30px 30px 30px;
+}

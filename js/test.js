@@ -33,7 +33,7 @@ function checkAnswer() {
 
 function sayHello(event) {
     event.preventDefault();
-    const result = checkAnswer()
+    const result = checkAnswer();
     if (!result.includes(false)) {
         alert('정답입니다!');
     }
@@ -46,10 +46,10 @@ function changeColor(result) {
     const questions = document.getElementsByClassName('question');
     for (let i = 0; i < questions.length; i++) {
         if (result[i] === true)
-            questions[i].style.color = 'blue';
+            questions[i].style.setProperty('color', 'blue', 'important');
         else
-            questions[i].style.color = 'red';
+            questions[i].style.setProperty('color', 'red', 'important');
     }
 }
 
-form.onsubmit = sayHello;
+form.onsubmit = event => sayHello(event);
