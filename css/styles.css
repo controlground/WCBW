@@ -11571,9 +11571,5 @@ p.mb-4 {
 }
 
 .btn-dark {
-  color: white !important;
-}
-
-.btn {
-  color: blue;
+  color: #FFFFFF!important;
 }
