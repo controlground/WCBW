@@ -11569,3 +11569,11 @@ p.mb-4 {
   background-image: url("../assets/img/portfolio/background.png") !important;
   background-size: cover;
 }
+
+.btn-dark {
+  color: white !important;
+}
+
+.btn {
+  color: blue;
+}
