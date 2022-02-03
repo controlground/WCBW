@@ -30,6 +30,34 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IM_Hyemin-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Future_tree';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_04@1.0/Future_tree.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Y_Spotlight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11576,4 +11604,20 @@ p.mb-4 {
 
 .first-question, .second-question, .third-question, .fourth-question {
   margin: 30px 30px 30px 30px;
+}
+
+h3.question, div#first-question label, div#fourth-question label {
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+
+div#first-question label, div#fourth-question label {
+  font-size: 15pt;
+}
+
+.page-section-heading {
+  font-family: 'IM_Hyemin-Bold';
+}
+
+.masthead-subheading.font-weight-light.mb-0 {
+  font-family: 'Y_Spotlight';
 }
