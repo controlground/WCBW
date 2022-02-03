@@ -375,7 +375,7 @@
     <section class="page-section text-white mb-0" id="quiz">
         <div class="container">
             <form id="hello">
-                <div class="first-question">
+                <div id="first-question">
                     <h3 class="question"> 다음 중 재활용 쓰레기가 아닌 것을 <u>모두</u> 골라주세요.</h3>
                     <input name="math" class="form-check-input" id="gas" type="checkbox"><label for="gas">부탄가스</label>
                     <br />
@@ -391,22 +391,26 @@
                     <input name="math" class="correct form-check-input" id="glove" type="checkbox"><label
                         for="glove">고무장갑</label> <br />
                     <input name="math" class="form-check-input" id="fruit" type="checkbox"><label for="fruit">과일
-                        껍질</label>
+                        껍질</label> <br />
+                    <button type="button" id="first-hint" class="hint btn btn-success">힌트</button>
                 </div>
-            <div class="second-question">
+            <div id="second-question">
                 <h3 class="question">플라스틱 쓰레기가 분해되는데 약 몇 년이 필요할까요?</h3>
-                <input id="second" type="number" min="0" required />
+                <input id="second" type="number" min="0" required /> <br />
+                <button type="button" id="second-hint" class="btn btn-success">힌트</button>
             </div>
-            <div class="third-question">
+            <div id="third-question">
                 <h3 class="question">햄버거를 만들 때 필요한 이것을 재배하기 위해 아프리카 산림이 파괴되고 있다고 합니다. 이것은 무엇일까요?</h3>
-                <input id="third" type="text" required />
+                <input id="third" type="text" required /> <br />
+                <button type="button" id="third-hint" class="hint btn btn-success">힌트</button>
             </div>
-            <div class="fourth-question">
+            <div id="fourth-question">
                 <h3 class="question">소가 배출하는 일종의 가스로서, 이산화탄소보다 84배 정도 지구온난화에 영향을 끼치는 이것의 이름은?</h3>
                 <input name="cow" id="methane" type="radio" required><label for="methane">메탄</label> <br />
                 <input name="cow" id="freon" type="radio"><label for="freon">프레온</label> <br />
                 <input name="cow" id="ah" type="radio"><label for="ah">아산화질소</label> <br />
                 <input name="cow" id="gwa" type="radio"><label for="gwa">과불화탄소</label> <br />
+                <button type="button" id="fourth-hint" class="hint btn btn-success">힌트</button>
             </div>
                 <input type="submit" class="btn btn-dark">
                 <input type="reset" class="btn btn-light">
