@@ -10,27 +10,36 @@ const secondHint = document.getElementById('second-hint');
 const thirdHint = document.getElementById('third-hint');
 const fourthHint = document.getElementById('fourth-hint');
 
-const isFirstClicked = [true, true, true, false];
+const currentlyClicked = [false, false, false, false];
 
 function giveLink(buttonTag, link) {
-    const newTag = document.createElement('a');
-    newTag.href = link;
-    newTag.innerText = '바로 가기';
-    buttonTag.after(newTag);
+    if (currentlyClicked[0] === false) {
+        const newTag = document.createElement('a');
+        newTag.href = link;
+        newTag.innerText = '바로 가기';
+        buttonTag.after(newTag);
+        currentlyClicked[0] = true;
+    }
+    else {
+        const linkTag = buttonTag.nextElementSibling;
+        currentlyClicked[0] = false;
+        linkTag.parentNode.removeChild(linkTag);
+    }
 }
 
 function giveHint(buttonTag, hint, pos) {
-    // hint = '대기중 주요 온길 가스 중 하나
-    // pos = 3
-    if (isFirstClicked[pos] === true) { // 클릭이 되어있을 경우
+    if (currentlyClicked[pos] === false) { // 클릭이 되어있을 경우
         // 글자를 추가하는 코드를 실행
         const newTag = document.createElement('span');
         newTag.innerText = hint;
         buttonTag.after(newTag);
-        isFirstClicked[pos] = false; 
+        currentlyClicked[pos] = true;
     }
     else { //클릭이 되어있지 않을 경우
         // 글자를 삭제하는 코드를 실행
+        const hintTag = buttonTag.nextElementSibling;
+        currentlyClicked[pos] = false;
+        hintTag.parentNode.removeChild(hintTag);
     }
 }
 
